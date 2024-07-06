@@ -12,6 +12,9 @@
 #' @export
 #'
 #' @examples
+#'
+#' convert_to_freedom_units(grades = c(1.3, 2.8))
+#'
 convert_to_freedom_units <- function(grades, max_passing_grade = 4, min_passing_grade = 1) {
 
   # Convert grades to freedom units
