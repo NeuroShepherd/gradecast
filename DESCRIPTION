@@ -8,7 +8,7 @@ Author: person("Pat", "Callahan",
               comment = c(ORCID = "0000-0002-0000-0000")
               )
 Maintainer: Pat Callahan <patricktcallahan18@gmail.com>
-Description: |
+Description: 
     Convert between German and US grades/GPA systems. Visualize potential final 
     GPA based on current grades and remaining European Credit Transfer and 
     Accumulation points (ECTS).
