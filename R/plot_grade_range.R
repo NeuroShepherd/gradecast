@@ -25,8 +25,8 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
     completed_ects = completed_ects,
     current_grade = current_grade,
     program_ects = program_ects,
-    grades_high = grades[1],
-    grades_low = grades[2]
+    grades_high = grades["best_outcome"],
+    grades_low = grades["worst_outcome"]
   )
 
   ylims <- c(min(c(top_grade, worst_grade)), max(c(top_grade, worst_grade)))

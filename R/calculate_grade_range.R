@@ -25,7 +25,7 @@ calculate_grade_range <- function(completed_ects, current_grade, remaining_ects,
   best_outcome <- (completed_ects * current_grade + remaining_ects * top_grade) / (completed_ects + remaining_ects)
 
   # Calculate the grade range
-  grade_range <- c(best_outcome, worst_outcome)
+  grade_range <- c(best_outcome = best_outcome, worst_outcome = worst_outcome)
 
   return(grade_range)
 }
