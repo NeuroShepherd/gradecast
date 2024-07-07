@@ -1,4 +1,3 @@
-
 #' Convert grades to freedom units
 #'
 #' This function takes a vector of grade on the German scale and converts them
@@ -17,13 +16,8 @@
 #' convert_to_freedom_units(grades = c(1.3, 2.8))
 #'
 convert_to_freedom_units <- function(grades, max_passing_grade = 4, min_passing_grade = 1) {
-
   # Convert grades to freedom units
   freedom_units <- 1 + ((max_passing_grade - grades) / (max_passing_grade - min_passing_grade)) * 3
 
   return(freedom_units)
-
-
 }
-
-

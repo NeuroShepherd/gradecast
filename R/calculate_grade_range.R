@@ -1,4 +1,3 @@
-
 #' Calculate grade range
 #'
 #' This function calculates the best and worst possible grade averages that can
@@ -21,7 +20,6 @@
 #'
 calculate_grade_range <- function(completed_ects, current_grade, remaining_ects,
                                   top_grade = 1, worst_grade = 5) {
-
   # Calculate the weighted min and max grade
   worst_outcome <- (completed_ects * current_grade + remaining_ects * worst_grade) / (completed_ects + remaining_ects)
   best_outcome <- (completed_ects * current_grade + remaining_ects * top_grade) / (completed_ects + remaining_ects)
@@ -30,8 +28,4 @@ calculate_grade_range <- function(completed_ects, current_grade, remaining_ects,
   grade_range <- c(best_outcome, worst_outcome)
 
   return(grade_range)
-
 }
-
-
-
