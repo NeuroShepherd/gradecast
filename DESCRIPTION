@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: person("Pat", "Callahan", 
               email = "patricktcallahan18@gmail.com", 
               role = c("aut", "cre"), 
-              comment = c(ORCID = "0000-0002-0000-0000")
+              comment = c(ORCID = "0000-0003-1769-7580")
               )
 Maintainer: Pat Callahan <patricktcallahan18@gmail.com>
 Description: 
