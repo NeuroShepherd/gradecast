@@ -5,8 +5,8 @@
 #' calculation makes use of the so-called "Bavarian formula."
 #'
 #' @param grades a vector of grades on the German scale
-#' @param max_passing_grade the maximum passing grade score in the US
-#' @param min_passing_grade the minimum passing grade score in the US
+#' @param max_passing_grade the maximum passing grade score in the US. Should be 4 always
+#' @param min_passing_grade the minimum passing grade score in the US. Should be 1 always
 #'
 #' @return a vector of grades in "freedom units"
 #' @export
