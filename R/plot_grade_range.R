@@ -13,13 +13,23 @@
 #'
 #' @examples
 #'
+#' # On the German scale
 #' plot_grade_range(30, 1.5, 90)
+#'
+#'
+#' # Now the same plot, but on the American scale and converting the grades.
+#' # Note the `.` in the `plot_grade_range` function call. This is a placeholder
+#' # for the result of the previous function call.
+#'
+#' convert_to_freedom_units(1.5) %>%
+#'  plot_grade_range(30, ., 90, top_grade = 4, worst_grade = 1)
 #'
 plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
                              top_grade = 1, worst_grade = 5) {
   program_ects <- completed_ects + remaining_ects
 
-  grades <- calculate_grade_range(completed_ects, current_grade, remaining_ects, 1, 5)
+  grades <- calculate_grade_range(completed_ects, current_grade, remaining_ects,
+                                  top_grade = top_grade, worst_grade = worst_grade)
 
   plt_data <- data.frame(
     completed_ects = completed_ects,
@@ -30,6 +40,10 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
   )
 
   ylims <- c(min(c(top_grade, worst_grade)), max(c(top_grade, worst_grade)))
+
+
+  caption_text <- glue::glue("The shaded region represents the range of all possible grade averages that can be achieved based on the current grade average and the number of ECTS credits already completed and the amount remaining to complete. The red line indicates the worst possible scenario i.e. obtaining {worst_grade}s in all classes while the green line indicates the best possible scenario i.e. obtaining {top_grade}s in all classes. The blue dashed line represents the highest passing grade, a 1.0 and a 4.0 on the common German and American scales, respectively.") %>%
+    stringr::str_wrap(width = 150)
 
 
   ggplot2::ggplot(data = plt_data) +
@@ -70,12 +84,12 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
       alpha = 0.2
     ) +
     ggplot2::theme_bw() +
-    ggplot2::geom_hline(yintercept = 1, color = "blue", linetype = "dashed") +
+    ggplot2::geom_hline(yintercept = top_grade, color = "blue", linetype = "dashed") +
     ggplot2::labs(
       title = "Grade range",
       x = "ECTS credits",
       y = "Grade\nAverage",
-      caption = stringr::str_wrap("The shaded region represents the range of all possible grade averages that can be achieved based on the current grade average and the number of ECTS credits already completed and the amount remaining to complete. The red line indicates the worst possible scenario i.e. obtaining 5s in all classes while the green line indicates the best possible scenario i.e. obtaining 1s in all classes. The blue dashed line represents the highest passing grade of 1.0 on the German scale.", width = 130)
+      caption = caption_text
     ) +
     ggplot2::theme(
       plot.title = ggplot2::element_text(hjust = 0.5),
