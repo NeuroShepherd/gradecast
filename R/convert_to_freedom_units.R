@@ -2,7 +2,8 @@
 #' Convert grades to freedom units
 #'
 #' This function takes a vector of grade on the German scale and converts them
-#' to the "freedom units" scale i.e. to the equivalent American GPA scale.
+#' to the "freedom units" scale i.e. to the equivalent American GPA scale. This
+#' calculation makes use of the so-called "Bavarian formula."
 #'
 #' @param grades a vector of grades
 #' @param max_passing_grade the maximum passing grade score

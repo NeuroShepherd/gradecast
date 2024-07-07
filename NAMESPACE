@@ -2,3 +2,5 @@
 
 export(calculate_grade_range)
 export(convert_to_freedom_units)
+export(plot_grade_range)
+importFrom(rlang,.data)

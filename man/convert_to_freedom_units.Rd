@@ -18,7 +18,8 @@ a vector of grades in "freedom units"
 }
 \description{
 This function takes a vector of grade on the German scale and converts them
-to the "freedom units" scale i.e. to the equivalent American GPA scale.
+to the "freedom units" scale i.e. to the equivalent American GPA scale. This
+calculation makes use of the so-called "Bavarian formula."
 }
 \examples{
 
