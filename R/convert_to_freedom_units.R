@@ -17,15 +17,20 @@
 #'
 convert_to_freedom_units <- function(grades, max_passing_grade = 4, min_passing_grade = 1) {
 
-  if (max_passing_grade != 4 || min_passing_grade != 1) {
-    warning("The maximum passing grade and the minimum passing grade should almost always be 4 and 1, respectively, in the US grading system. Are you sure this should be changed?")
-  }
-
   assertthat::assert_that(
-    grades >= 1.0,
-    grades <= 5.0,
+    all(grades >= 1.0),
+    all(grades <= 5.0),
     msg = "grades must be between 1.0 and 5.0 for the Bavarian formula to work."
   )
+
+  assertthat::assert_that(
+    all(max_passing_grade > min_passing_grade),
+    msg = "max_passing_grade must be greater than min_passing_grade"
+  )
+
+  if ( any(max_passing_grade != 4 || min_passing_grade != 1) ) {
+    warning("The maximum passing grade and the minimum passing grade should almost always be 4 and 1, respectively, in the US grading system. Are you sure this should be changed?")
+  }
 
   # Convert grades to freedom units
   freedom_units <- 1 + ((max_passing_grade - grades) / (max_passing_grade - min_passing_grade)) * 3
