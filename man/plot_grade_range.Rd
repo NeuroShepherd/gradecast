@@ -40,6 +40,6 @@ plot_grade_range(30, 1.5, 90)
 # for the result of the previous function call.
 
 convert_to_freedom_units(1.5) \%>\%
- plot_grade_range(30, ., 90, top_grade = 4, worst_grade = 1)
+  plot_grade_range(30, ., 90, top_grade = 4, worst_grade = 1)
 
 }

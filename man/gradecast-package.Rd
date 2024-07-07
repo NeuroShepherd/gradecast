@@ -8,4 +8,11 @@
 \description{
 Convert between German and US grades/GPA systems. Visualize potential final GPA based on current grades and remaining European Credit Transfer and Accumulation points (ECTS).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://neuroshepherd.github.io/gradecast/}
+}
+
+}
 \keyword{internal}
