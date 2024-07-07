@@ -31,6 +31,15 @@ Plot grade range
 }
 \examples{
 
+# On the German scale
 plot_grade_range(30, 1.5, 90)
+
+
+# Now the same plot, but on the American scale and converting the grades.
+# Note the `.` in the `plot_grade_range` function call. This is a placeholder
+# for the result of the previous function call.
+
+convert_to_freedom_units(1.5) \%>\%
+ plot_grade_range(30, ., 90, top_grade = 4, worst_grade = 1)
 
 }

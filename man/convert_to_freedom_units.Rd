@@ -7,11 +7,11 @@
 convert_to_freedom_units(grades, max_passing_grade = 4, min_passing_grade = 1)
 }
 \arguments{
-\item{grades}{a vector of grades}
+\item{grades}{a vector of grades on the German scale}
 
-\item{max_passing_grade}{the maximum passing grade score}
+\item{max_passing_grade}{the maximum passing grade score in the US}
 
-\item{min_passing_grade}{the minimum passing grade score}
+\item{min_passing_grade}{the minimum passing grade score in the US}
 }
 \value{
 a vector of grades in "freedom units"
