@@ -13,13 +13,18 @@ test_that("conversion from German to US works", {
 
 
 test_that("conversion from German to custom US functions", {
-  expect_vector(convert_to_freedom_units(1:5, max_passing_grade = 4, min_passing_grade = 2))
-  expect_length(convert_to_freedom_units(1:5, max_passing_grade = 4, min_passing_grade = 2), 5)
+  suppressWarnings(convert_to_freedom_units(1:5, max_passing_grade = 4, min_passing_grade = 2))
+  suppressWarnings(expect_length(convert_to_freedom_units(1:5, max_passing_grade = 4, min_passing_grade = 2), 5))
 })
 
 test_that("check function assertions", {
-  expect_error(convert_to_freedom_units(0), "grades must be between 1.0 and 5.0 for the Bavarian formula to work.")
-  expect_error(convert_to_freedom_units(6), "grades must be between 1.0 and 5.0 for the Bavarian formula to work.")
+  expect_error(convert_to_freedom_units(0),
+               "grades must be between 1.0 and 5.0 for the Bavarian formula to work.")
+  expect_error(convert_to_freedom_units(6),
+               "grades must be between 1.0 and 5.0 for the Bavarian formula to work.")
+  expect_error(
+    convert_to_freedom_units(1:5, max_passing_grade = 2, min_passing_grade = 4),
+    "max_passing_grade must be greater than min_passing_grade")
 })
 
 test_that("check warning", {
