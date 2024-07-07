@@ -42,7 +42,7 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
   ylims <- c(min(c(top_grade, worst_grade)), max(c(top_grade, worst_grade)))
 
 
-  caption_text <- glue::glue("The shaded region represents the range of all possible grade averages that can be achieved based on the current grade average and the number of ECTS credits already completed and the amount remaining to complete. The red line indicates the worst possible scenario i.e. obtaining {worst_grade}s in all classes while the green line indicates the best possible scenario i.e. obtaining {top_grade}s in all classes. The blue dashed line represents the highest passing grade, a 1.0 and a 4.0 on the common German and American scales, respectively.") %>%
+  caption_text <- glue::glue("The shaded region represents the range of all possible grade averages that can be achieved based on three factors: 1) the current grade average or GPA, 2) the number of ECTS credits already completed, 3) and the amount of remaining ECTS to complete.\n\nThe red line indicates the worst possible scenario i.e. obtaining {worst_grade}s in all classes while the green line indicates the best possible scenario i.e. obtaining {top_grade}s in all classes. The blue dashed line represents the highest passing grade, a 1.0 and a 4.0 on the common German and American scales, respectively.") %>%
     stringr::str_wrap(width = 150)
 
 
