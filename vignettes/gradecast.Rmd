@@ -63,10 +63,10 @@ The function returns a ggplot2 object that visualizes the grade range. The shade
 
 Using the same scenario from the previous example, we can use the `plot_grade_range()` function to visualize the grade range.
 
-```{r, results = "asis", fig.width = 6, fig.height = 5, fig.align = "center"}
+```{r, results = "asis", fig.width = 7, fig.height = 5, fig.align = "center"}
 plot_grade_range(completed, grade, remaining,
                  max_passing_grade = 1, min_passing_grade = 5,
-                 caption_width = 90)
+                 caption_width = 100)
 
 ```
 
