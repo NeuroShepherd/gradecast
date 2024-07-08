@@ -40,7 +40,8 @@ mod_plot_grade_server <- function(id, completed_ects, current_grade, remaining_e
         current_grade = parameters()$current_grade,
         remaining_ects = parameters()$remaining_ects,
         max_passing_grade = parameters()$max_passing_grade,
-        min_passing_grade = parameters()$min_passing_grade
+        min_passing_grade = parameters()$min_passing_grade,
+        show_caption = FALSE
       )
     })
 

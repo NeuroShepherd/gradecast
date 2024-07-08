@@ -10,6 +10,7 @@ plot_grade_range(
   remaining_ects,
   max_passing_grade = 1,
   min_passing_grade = 5,
+  show_caption = T,
   caption_width = 150
 )
 }
@@ -23,6 +24,8 @@ plot_grade_range(
 \item{max_passing_grade}{the best possible grade}
 
 \item{min_passing_grade}{the worst possible grade}
+
+\item{show_caption}{whether or not to display the text caption}
 
 \item{caption_width}{text width for the caption. default 150}
 }
