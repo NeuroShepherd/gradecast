@@ -20,7 +20,7 @@ library(gradecast)
 
 ## What is {gradecast}?
 
-This package allows someone to estimate the grade range they can expect to achieve in a program based on their current grade and the number of ECTS they have completed. The grade range is calculated based on the best and worst possible outcomes for the remaining ECTS.
+This package allows someone to forecast the grade range ("gradecast") they can expect to achieve in a program based on their current grade and the number of ECTS they have completed. The grade range is calculated based on the best and worst possible outcomes for the remaining ECTS.
 
 The basic assumption of this package is that grading follows the standard German university grading system, where 1 is the best grade and 5 is the worst. The user, however, can specify the best and worst possible grades in the program, and the package will calculate the grade range based on these values.
 
