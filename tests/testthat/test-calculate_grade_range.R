@@ -12,8 +12,8 @@ test_that("calculate grade range works", {
   expect_error(calculate_grade_range(120, 3.5, -1), "remaining_ects must be >= 0")
 
   # Test the function with a current grade below the top grade
-  expect_error(calculate_grade_range(120, 3.5, 60, 4, 5), "current_grade must be between top_grade and worst_grade")
+  expect_error(calculate_grade_range(120, 3.5, 60, 4, 5), "current_grade must be between max_passing_grade and min_passing_grade")
 
   # Test the function with a current grade above the worst grade
-  expect_error(calculate_grade_range(120, 3.5, 60, 1, 3), "current_grade must be between top_grade and worst_grade")
+  expect_error(calculate_grade_range(120, 3.5, 60, 1, 3), "current_grade must be between max_passing_grade and min_passing_grade")
 })

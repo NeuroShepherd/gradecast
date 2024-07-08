@@ -8,8 +8,8 @@ calculate_grade_range(
   completed_ects,
   current_grade,
   remaining_ects,
-  top_grade = 1,
-  worst_grade = 5
+  max_passing_grade = 1,
+  min_passing_grade = 5
 )
 }
 \arguments{
@@ -19,9 +19,9 @@ calculate_grade_range(
 
 \item{remaining_ects}{the number of ECTS credits remaining to complete}
 
-\item{top_grade}{the best possible grade}
+\item{max_passing_grade}{the best possible grade}
 
-\item{worst_grade}{the worst possible grade}
+\item{min_passing_grade}{the worst possible grade}
 }
 \value{
 a vector with the best and worst possible grade averages
