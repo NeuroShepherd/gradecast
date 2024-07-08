@@ -2,6 +2,7 @@
 
 export("%>%")
 export(calculate_grade_range)
+export(caption_builder)
 export(convert_to_freedom_units)
 export(plot_grade_range)
 export(run_app)
