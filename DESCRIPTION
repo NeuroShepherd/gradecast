@@ -26,7 +26,8 @@ Imports:
     rlang,
     shiny (>= 1.8.1.1),
     stringr,
-    bslib
+    bslib,
+    bsicons
 Suggests: 
     knitr,
     rmarkdown,
