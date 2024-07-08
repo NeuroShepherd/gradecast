@@ -109,7 +109,8 @@ grading system.</p>
 <span><span class="va">remaining</span> <span class="op">&lt;-</span> <span class="fl">90</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/calculate_grade_range.html">calculate_grade_range</a></span><span class="op">(</span><span class="va">completed</span>, <span class="va">grade</span>, <span class="va">remaining</span>,</span>
-<span>                      max_passing_grade <span class="op">=</span> <span class="fl">1</span>, min_passing_grade <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span>  max_passing_grade <span class="op">=</span> <span class="fl">1</span>, min_passing_grade <span class="op">=</span> <span class="fl">5</span></span>
+<span><span class="op">)</span></span>
 <span><span class="co">#&gt;  best_outcome worst_outcome </span></span>
 <span><span class="co">#&gt;         1.125         4.125</span></span></code></pre></div>
 </div>
@@ -149,8 +150,9 @@ classes. The blue dashed line represents the highest passing grade.</p>
 range.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_grade_range.html">plot_grade_range</a></span><span class="op">(</span><span class="va">completed</span>, <span class="va">grade</span>, <span class="va">remaining</span>,</span>
-<span>                 max_passing_grade <span class="op">=</span> <span class="fl">1</span>, min_passing_grade <span class="op">=</span> <span class="fl">5</span>,</span>
-<span>                 caption_width <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
+<span>  max_passing_grade <span class="op">=</span> <span class="fl">1</span>, min_passing_grade <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  caption_width <span class="op">=</span> <span class="fl">100</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p><img src="gradecast_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;"></p>
 <p>Note: this function actually wraps the
 <code><a href="../reference/calculate_grade_range.html">calculate_grade_range()</a></code> function and creates a ggplot2
@@ -183,8 +185,10 @@ the caption.</p>
 <p>As an example, let’s build the caption for the grade range plot with
 the worst possible grade of 5 and the best possible grade of 1.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/caption_builder.html">caption_builder</a></span><span class="op">(</span>min_passing_grade <span class="op">=</span> <span class="fl">5</span>, max_passing_grade <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>                caption_width <span class="op">=</span> <span class="fl">150</span>, show_caption <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/caption_builder.html">caption_builder</a></span><span class="op">(</span></span>
+<span>  min_passing_grade <span class="op">=</span> <span class="fl">5</span>, max_passing_grade <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  caption_width <span class="op">=</span> <span class="fl">150</span>, show_caption <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "The shaded region represents the range of all possible grade averages that can be achieved based on three factors: 1) the current grade average\nor GPA, 2) the number of ECTS credits already completed, and 3) the amount of remaining ECTS. The red line indicates the worst possible scenario\ni.e. obtaining 5s in all classes while the green line indicates the best possible scenario i.e. obtaining 1s in all classes. The blue dashed line\nrepresents the highest passing grade."</span></span></code></pre></div>
 </div>
 <div class="section level3">
