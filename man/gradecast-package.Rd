@@ -15,4 +15,8 @@ Useful links:
 }
 
 }
+\author{
+\strong{Maintainer}: Pat Callahan \email{patricktcallahan18@gmail.com} (\href{https://orcid.org/0000-0003-1769-7580}{ORCID})
+
+}
 \keyword{internal}

@@ -2,16 +2,15 @@ Package: gradecast
 Type: Package
 Title: Calculate and visualize potential school grades
 Version: 0.1.0
-Author: person("Pat", "Callahan", 
-              email = "patricktcallahan18@gmail.com", 
-              role = c("aut", "cre"), 
-              comment = c(ORCID = "0000-0003-1769-7580")
-              )
-Maintainer: Pat Callahan <patricktcallahan18@gmail.com>
 Description: 
     Convert between German and US grades/GPA systems. Visualize potential final 
     GPA based on current grades and remaining European Credit Transfer and 
     Accumulation points (ECTS).
+Authors@R: 
+    person("Pat", "Callahan", 
+    email = "patricktcallahan18@gmail.com",
+    comment = c(ORCID = "0000-0003-1769-7580"),
+    role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -35,3 +34,4 @@ Suggests:
 Config/testthat/edition: 3
 URL: https://neuroshepherd.github.io/gradecast/
 VignetteBuilder: knitr
+
