@@ -55,7 +55,7 @@ plot_grade_range(
   remaining_ects = 60,
   max_passing_grade = 1,
   min_passing_grade = 5,
-  caption_width = 105
+  caption_width = 95
 )
 ```
 
