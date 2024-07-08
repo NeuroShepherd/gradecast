@@ -25,7 +25,8 @@ Imports:
     magrittr,
     rlang,
     shiny (>= 1.8.1.1),
-    stringr
+    stringr,
+    bslib
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

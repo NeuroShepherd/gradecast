@@ -9,8 +9,20 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h1("gradecast")
+    bslib::page_sidebar(
+      title = "gradecast",
+      sidebar = bslib::sidebar(
+        title = "Data Input",
+        mod_completed_ects_ui("completed_ects_1"),
+        mod_current_grade_ui("current_grade_1"),
+        mod_remaining_ects_ui("remaining_ects_1"),
+        mod_max_passing_grade_ui("max_passing_grade_1"),
+        mod_min_passing_grade_ui("min_passing_grade_1")
+      ),
+      bslib::card(
+        bslib::card_header("Hello"),
+        mod_plot_grade_ui("plot_grade_1")
+      )
     )
   )
 }
