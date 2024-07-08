@@ -19,9 +19,12 @@ RoxygenNote: 7.3.2
 Imports: 
     assertthat,
     ggplot2,
+    config (>= 0.3.2),
     glue,
+    golem (>= 0.4.1),
     magrittr,
     rlang,
+    shiny (>= 1.8.1.1),
     stringr
 Suggests: 
     testthat (>= 3.0.0)
