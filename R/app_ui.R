@@ -23,7 +23,11 @@ app_ui <- function(request) {
       bslib::card(
         bslib::card_header("Hello"),
         mod_plot_grade_ui("plot_grade_1")
-      )
+      ),
+      bslib::card(
+        bslib::card_header("Info"),
+        mod_info_textbox_ui("info_textbox_1")
+        )
     )
   )
 }

@@ -21,4 +21,10 @@ app_server <- function(input, output, session) {
     min_passing_grade = min_passing_grade_1,
     run_button = run_button
   )
+
+  mod_info_textbox_server("info_textbox_1",
+                          min_passing_grade = min_passing_grade_1,
+                          max_passing_grade = max_passing_grade_1,
+                          caption_width = 200,
+                          run_button = run_button)
 }
