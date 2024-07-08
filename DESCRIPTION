@@ -28,6 +28,9 @@ Imports:
     stringr,
     bslib
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://neuroshepherd.github.io/gradecast/
+VignetteBuilder: knitr
