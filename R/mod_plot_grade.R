@@ -18,11 +18,11 @@ mod_plot_grade_ui <- function(id){
 #'
 #' @noRd
 mod_plot_grade_server <- function(id, completed_ects, current_grade, remaining_ects,
-                                  max_passing_grade, min_passing_grade) {
+                                  max_passing_grade, min_passing_grade, run_button) {
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
-    browser()
+    # browser()
 
     parameters <- reactive({
       list(
@@ -34,21 +34,22 @@ mod_plot_grade_server <- function(id, completed_ects, current_grade, remaining_e
       )
     })
 
-    output$grade_plot <- shiny::renderPlot({
-
-        plot_grade_range(
-          completed_ects = parameters()$completed_ects,
-          current_grade = parameters()$current_grade,
-          remaining_ects = parameters()$remaining_ects,
-          max_passing_grade = parameters()$max_passing_grade,
-          min_passing_grade = parameters()$min_passing_grade
-        )
-
+    plot_obj <- eventReactive(run_button(), ignoreNULL = FALSE, {
+      plot_grade_range(
+        completed_ects = parameters()$completed_ects,
+        current_grade = parameters()$current_grade,
+        remaining_ects = parameters()$remaining_ects,
+        max_passing_grade = parameters()$max_passing_grade,
+        min_passing_grade = parameters()$min_passing_grade
+      )
     })
 
+    output$grade_plot <- renderPlot({
+      plot_obj()
+      })
 
 
-  })
+    })
 }
 
 ## To be copied in the UI

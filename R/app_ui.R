@@ -17,7 +17,8 @@ app_ui <- function(request) {
         mod_current_grade_ui("current_grade_1"),
         mod_remaining_ects_ui("remaining_ects_1"),
         mod_max_passing_grade_ui("max_passing_grade_1"),
-        mod_min_passing_grade_ui("min_passing_grade_1")
+        mod_min_passing_grade_ui("min_passing_grade_1"),
+        mod_run_button_ui("run_button_1")
       ),
       bslib::card(
         bslib::card_header("Hello"),
