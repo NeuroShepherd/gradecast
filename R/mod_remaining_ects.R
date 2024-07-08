@@ -7,23 +7,23 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_remaining_ects_ui <- function(id){
+mod_remaining_ects_ui <- function(id) {
   ns <- NS(id)
   tagList(
     numericInput(ns("remaining_ects"), "Remaining ECTS",
-                 value = 120, min = 0, step = 1)
+      value = 120, min = 0, step = 1
+    )
   )
 }
 
 #' remaining_ects Server Functions
 #'
 #' @noRd
-mod_remaining_ects_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_remaining_ects_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     return(reactive(input$remaining_ects))
-
   })
 }
 

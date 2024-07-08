@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_run_button_ui <- function(id){
+mod_run_button_ui <- function(id) {
   ns <- NS(id)
   tagList(
     actionButton(ns("run_button"), "Run")
@@ -17,12 +17,11 @@ mod_run_button_ui <- function(id){
 #' run_button Server Functions
 #'
 #' @noRd
-mod_run_button_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_run_button_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     return(reactive(input$run_button))
-
   })
 }
 

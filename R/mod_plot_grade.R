@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_plot_grade_ui <- function(id){
+mod_plot_grade_ui <- function(id) {
   ns <- NS(id)
   tagList(
     plotOutput(ns("grade_plot"))
@@ -19,7 +19,7 @@ mod_plot_grade_ui <- function(id){
 #' @noRd
 mod_plot_grade_server <- function(id, completed_ects, current_grade, remaining_ects,
                                   max_passing_grade, min_passing_grade, run_button) {
-  moduleServer( id, function(input, output, session){
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     # browser()
@@ -46,10 +46,8 @@ mod_plot_grade_server <- function(id, completed_ects, current_grade, remaining_e
 
     output$grade_plot <- renderPlot({
       plot_obj()
-      })
-
-
     })
+  })
 }
 
 ## To be copied in the UI

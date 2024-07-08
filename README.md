@@ -77,7 +77,6 @@ German and US grading scales (affectionaly known as “freedom units”
 here.)
 
 ``` r
-
 grade_in_germany <- 1.3
 
 convert_to_freedom_units(grade_in_germany)

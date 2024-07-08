@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_completed_ects_ui <- function(id){
+mod_completed_ects_ui <- function(id) {
   ns <- NS(id)
   tagList(
     numericInput(ns("completed_ects"), "Completed ECTS", value = 0)
@@ -17,12 +17,11 @@ mod_completed_ects_ui <- function(id){
 #' completed_ects Server Functions
 #'
 #' @noRd
-mod_completed_ects_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_completed_ects_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     return(reactive(input$completed_ects))
-
   })
 }
 

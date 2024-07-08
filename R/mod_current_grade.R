@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_current_grade_ui <- function(id){
+mod_current_grade_ui <- function(id) {
   ns <- NS(id)
   tagList(
     numericInput(ns("current_grade"), "Current Grade", value = 1)
@@ -17,12 +17,11 @@ mod_current_grade_ui <- function(id){
 #' current_grade Server Functions
 #'
 #' @noRd
-mod_current_grade_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_current_grade_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     return(reactive(input$current_grade))
-
   })
 }
 

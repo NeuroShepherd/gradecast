@@ -14,13 +14,11 @@ app_server <- function(input, output, session) {
   run_button <- mod_run_button_server("run_button_1")
 
   mod_plot_grade_server("plot_grade_1",
-                         completed_ects = completed_ects_1,
-                         current_grade = current_grade_1,
-                         remaining_ects = remaining_ects_1,
-                         max_passing_grade = max_passing_grade_1,
-                         min_passing_grade = min_passing_grade_1,
-                        run_button = run_button)
-
-
-
+    completed_ects = completed_ects_1,
+    current_grade = current_grade_1,
+    remaining_ects = remaining_ects_1,
+    max_passing_grade = max_passing_grade_1,
+    min_passing_grade = min_passing_grade_1,
+    run_button = run_button
+  )
 }
