@@ -41,8 +41,8 @@
 <span>  <span class="va">completed_ects</span>,</span>
 <span>  <span class="va">current_grade</span>,</span>
 <span>  <span class="va">remaining_ects</span>,</span>
-<span>  top_grade <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>  worst_grade <span class="op">=</span> <span class="fl">5</span></span>
+<span>  max_passing_grade <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  min_passing_grade <span class="op">=</span> <span class="fl">5</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -62,11 +62,11 @@
 <dd><p>the number of ECTS credits remaining to complete</p></dd>
 
 
-<dt id="arg-top-grade">top_grade<a class="anchor" aria-label="anchor" href="#arg-top-grade"></a></dt>
+<dt id="arg-max-passing-grade">max_passing_grade<a class="anchor" aria-label="anchor" href="#arg-max-passing-grade"></a></dt>
 <dd><p>the best possible grade</p></dd>
 
 
-<dt id="arg-worst-grade">worst_grade<a class="anchor" aria-label="anchor" href="#arg-worst-grade"></a></dt>
+<dt id="arg-min-passing-grade">min_passing_grade<a class="anchor" aria-label="anchor" href="#arg-min-passing-grade"></a></dt>
 <dd><p>the worst possible grade</p></dd>
 
 </dl></div>
@@ -88,7 +88,7 @@
 <span class="r-in"><span><span class="co"># for the result of the previous function call.</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="convert_to_freedom_units.html">convert_to_freedom_units</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span> <span class="op"><a href="pipe.html">%&gt;%</a></span></span></span>
-<span class="r-in"><span>  <span class="fu">plot_grade_range</span><span class="op">(</span><span class="fl">30</span>, <span class="va">.</span>, <span class="fl">90</span>, top_grade <span class="op">=</span> <span class="fl">4</span>, worst_grade <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu">plot_grade_range</span><span class="op">(</span><span class="fl">30</span>, <span class="va">.</span>, <span class="fl">90</span>, max_passing_grade <span class="op">=</span> <span class="fl">4</span>, min_passing_grade <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_grade_range-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
