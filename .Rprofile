@@ -5,5 +5,5 @@ source("renv/activate.R")
     shiny.autoreload = TRUE
   )
 
-  shiny::reactiveConsole(TRUE)
+
 }
