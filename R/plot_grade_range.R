@@ -5,6 +5,7 @@
 #' @param remaining_ects the number of ECTS credits remaining to complete
 #' @param max_passing_grade the best possible grade
 #' @param min_passing_grade the worst possible grade
+#' @param caption_width text width for the caption. default 150
 #'
 #' @return a ggplot2 object
 #' @export
@@ -25,7 +26,8 @@
 #'   plot_grade_range(30, ., 90, max_passing_grade = 4, min_passing_grade = 1)
 #'
 plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
-                             max_passing_grade = 1, min_passing_grade = 5) {
+                             max_passing_grade = 1, min_passing_grade = 5,
+                             caption_width = 150) {
   program_ects <- completed_ects + remaining_ects
 
   grades <- calculate_grade_range(
@@ -48,7 +50,7 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
 
 
   caption_text <- glue::glue("The shaded region represents the range of all possible grade averages that can be achieved based on three factors: 1) the current grade average or GPA, 2) the number of ECTS credits already completed, 3) and the amount of remaining ECTS to complete.\n\nThe red line indicates the worst possible scenario i.e. obtaining {min_passing_grade}s in all classes while the green line indicates the best possible scenario i.e. obtaining {max_passing_grade}s in all classes. The blue dashed line represents the highest passing grade, a 1.0 and a 4.0 on the common German and American scales, respectively.") %>%
-    stringr::str_wrap(width = 150)
+    stringr::str_wrap(width = caption_width)
 
 
   ggplot2::ggplot(data = plt_data) +

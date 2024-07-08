@@ -9,7 +9,8 @@ plot_grade_range(
   current_grade,
   remaining_ects,
   max_passing_grade = 1,
-  min_passing_grade = 5
+  min_passing_grade = 5,
+  caption_width = 150
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ plot_grade_range(
 \item{max_passing_grade}{the best possible grade}
 
 \item{min_passing_grade}{the worst possible grade}
+
+\item{caption_width}{text width for the caption. default 150}
 }
 \value{
 a ggplot2 object
