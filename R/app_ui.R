@@ -11,6 +11,7 @@ app_ui <- function(request) {
     # Your application UI logic
     bslib::page_sidebar(
       title = "gradecast",
+      fillable = TRUE,
       sidebar = bslib::sidebar(
         title = "Data Input",
         mod_completed_ects_ui("completed_ects_1"),
@@ -21,11 +22,23 @@ app_ui <- function(request) {
         mod_run_button_ui("run_button_1")
       ),
       bslib::card(
-        bslib::card_header("Hello"),
+        min_height = 250,
+        bslib::card_header("App Info"),
+        mod_app_description_ui("app_description_1")
+      ),
+      bslib::card(
+        min_height = 250,
+        bslib::card_header("Final Grade"),
+        mod_final_grade_display_ui("final_grade_display_1")
+      ),
+      bslib::card(
+        min_height = 600,
+        bslib::card_header("Grade Forecasts"),
         mod_plot_grade_ui("plot_grade_1")
       ),
       bslib::card(
-        bslib::card_header("Info"),
+        min_height = 175,
+        bslib::card_header("Plot Info"),
         mod_info_textbox_ui("info_textbox_1")
         )
     )
