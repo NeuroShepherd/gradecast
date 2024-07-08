@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # gradecast
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/NeuroShepherd/gradecast/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NeuroShepherd/gradecast/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of gradecast is to allow students to calculate a possible range of final grades for their academic program based on their current grades, quantity of completed ECTS points, and the number of remaining ECTS points. The package is designed to be used in a Shiny app, where the user can input their data and see the possible range of final grades in a plot.
