@@ -28,8 +28,12 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
                              top_grade = 1, worst_grade = 5) {
   program_ects <- completed_ects + remaining_ects
 
-  grades <- calculate_grade_range(completed_ects, current_grade, remaining_ects,
-    top_grade = top_grade, worst_grade = worst_grade
+  grades <- calculate_grade_range(
+    completed_ects,
+    current_grade,
+    remaining_ects,
+    top_grade = top_grade,
+    worst_grade = worst_grade
   )
 
   plt_data <- data.frame(

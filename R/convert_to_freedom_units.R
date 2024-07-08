@@ -16,7 +16,6 @@
 #' convert_to_freedom_units(grades = c(1.3, 2.8))
 #'
 convert_to_freedom_units <- function(grades, max_passing_grade = 4, min_passing_grade = 1) {
-
   assertthat::assert_that(
     all(grades >= 1.0),
     all(grades <= 5.0),
@@ -28,7 +27,7 @@ convert_to_freedom_units <- function(grades, max_passing_grade = 4, min_passing_
     msg = "max_passing_grade must be greater than min_passing_grade"
   )
 
-  if ( any(max_passing_grade != 4 || min_passing_grade != 1) ) {
+  if (any(max_passing_grade != 4 || min_passing_grade != 1)) {
     warning("The maximum passing grade and the minimum passing grade should almost always be 4 and 1, respectively, in the US grading system. Are you sure this should be changed?")
   }
 
