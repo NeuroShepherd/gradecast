@@ -44,7 +44,8 @@ grade <- 1.5
 remaining <- 90
 
 calculate_grade_range(completed, grade, remaining,
-                      max_passing_grade = 1, min_passing_grade = 5)
+  max_passing_grade = 1, min_passing_grade = 5
+)
 ```
 
 ### Plotting the grade range
@@ -65,9 +66,9 @@ Using the same scenario from the previous example, we can use the `plot_grade_ra
 
 ```{r, results = "asis", fig.width = 7, fig.height = 5, fig.align = "center"}
 plot_grade_range(completed, grade, remaining,
-                 max_passing_grade = 1, min_passing_grade = 5,
-                 caption_width = 100)
-
+  max_passing_grade = 1, min_passing_grade = 5,
+  caption_width = 100
+)
 ```
 
 Note: this function actually wraps the `calculate_grade_range()` function and creates a ggplot2 object based on the results (hence the reason for having many of the same arguments). The ggplot2 object can be further customized using the standard ggplot2 syntax.
@@ -86,9 +87,10 @@ The function returns a character string that contains the text for the caption.
 As an example, let's build the caption for the grade range plot with the worst possible grade of 5 and the best possible grade of 1.
 
 ```{r}
-caption_builder(min_passing_grade = 5, max_passing_grade = 1,
-                caption_width = 150, show_caption = TRUE)
-
+caption_builder(
+  min_passing_grade = 5, max_passing_grade = 1,
+  caption_width = 150, show_caption = TRUE
+)
 ```
 
 

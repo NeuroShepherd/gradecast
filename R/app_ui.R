@@ -40,7 +40,7 @@ app_ui <- function(request) {
         min_height = 175,
         bslib::card_header("Plot Info"),
         mod_info_textbox_ui("info_textbox_1")
-        )
+      )
     )
   )
 }

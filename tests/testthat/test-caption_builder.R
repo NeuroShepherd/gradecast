@@ -1,4 +1,3 @@
-
 test_that("check caption_builder null", {
   expect_equal(
     caption_builder(
@@ -7,7 +6,8 @@ test_that("check caption_builder null", {
       caption_width = 100,
       show_caption = FALSE
     ),
-    NULL)
+    NULL
+  )
 })
 
 test_that("check caption_builder not null", {
@@ -19,7 +19,8 @@ test_that("check caption_builder not null", {
       show_caption = TRUE
     ),
     stringr::str_wrap("The shaded region represents the range of all possible grade averages that can be achieved based on three factors: 1) the current grade average or GPA, 2) the number of ECTS credits already completed, and 3) the amount of remaining ECTS.\n\nThe red line indicates the worst possible scenario i.e. obtaining 5s in all classes while the green line indicates the best possible scenario i.e. obtaining 1s in all classes. The blue dashed line represents the highest passing grade.",
-  width = 100)
+      width = 100
+    )
   )
 })
 

@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_info_textbox_ui <- function(id){
+mod_info_textbox_ui <- function(id) {
   ns <- NS(id)
   tagList(
     textOutput(ns("info_textbox"))
@@ -18,8 +18,8 @@ mod_info_textbox_ui <- function(id){
 #'
 #' @noRd
 mod_info_textbox_server <- function(id, min_passing_grade, max_passing_grade,
-                                    caption_width = 150, run_button){
-  moduleServer( id, function(input, output, session){
+                                    caption_width = 150, run_button) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     text <- eventReactive(run_button(), ignoreNULL = FALSE, {
@@ -28,13 +28,12 @@ mod_info_textbox_server <- function(id, min_passing_grade, max_passing_grade,
         max_passing_grade = max_passing_grade(),
         caption_width = caption_width,
         show_caption = TRUE
-        )
+      )
     })
 
     output$info_textbox <- renderText({
       text()
     })
-
   })
 }
 

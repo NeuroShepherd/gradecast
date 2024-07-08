@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_app_description_ui <- function(id){
+mod_app_description_ui <- function(id) {
   ns <- NS(id)
   tagList(
     "Have you ever looked at your current Notendurchschnitt (Grade Point Average or GPA), and wondered how much you can improve your grades by the of your program? (Alternatively: do you want to estimate how much you can slack off and still pass your program?) Then this app is for you! Just input how much of your program you've already completed (Completed ECTS), your current grades (Current Grades) and how much of your program remains (Remaining ECTS).",
@@ -18,10 +18,9 @@ mod_app_description_ui <- function(id){
 #' app_description Server Functions
 #'
 #' @noRd
-mod_app_description_server <- function(id){
-  moduleServer( id, function(input, output, session){
+mod_app_description_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
-
   })
 }
 

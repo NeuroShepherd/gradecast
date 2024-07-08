@@ -1,5 +1,3 @@
-
-
 #' Caption builder
 #'
 #' Builds the text caption for the grade range plot. The caption can be optionally turned off on the ggplot2 object which is useful when the text is not needed or rendered well on the image file. Instead, the Shiny app creates a separate text box for the caption.
@@ -17,7 +15,6 @@
 #' caption_builder(min_passing_grade = 5, max_passing_grade = 1)
 #'
 caption_builder <- function(min_passing_grade, max_passing_grade, caption_width = 150, show_caption = TRUE) {
-
   assertthat::assert_that(
     is.numeric(min_passing_grade),
     is.numeric(max_passing_grade),

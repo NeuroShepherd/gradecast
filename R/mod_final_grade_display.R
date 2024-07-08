@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_final_grade_display_ui <- function(id){
+mod_final_grade_display_ui <- function(id) {
   ns <- NS(id)
   tagList(
     bslib::layout_columns(
@@ -22,8 +22,8 @@ mod_final_grade_display_ui <- function(id){
 #'
 #' @noRd
 mod_final_grade_display_server <- function(id, completed_ects, current_grade, remaining_ects,
-                                           max_passing_grade, min_passing_grade, run_button){
-  moduleServer( id, function(input, output, session){
+                                           max_passing_grade, min_passing_grade, run_button) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     parameters <- reactive({
@@ -62,7 +62,6 @@ mod_final_grade_display_server <- function(id, completed_ects, current_grade, re
         showcase = bsicons::bs_icon("emoji-frown")
       )
     })
-
   })
 }
 
