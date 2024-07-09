@@ -104,9 +104,10 @@ plot_grade_range <- function(completed_ects, current_grade, remaining_ects,
       caption = caption_text
     ) +
     ggplot2::theme(
-      plot.title = ggplot2::element_text(hjust = 0.5),
-      axis.title = ggplot2::element_text(size = 12),
+      plot.title = ggplot2::element_text(hjust = 0.5, size = 22),
+      axis.title = ggplot2::element_text(size = 18),
       axis.title.y = ggplot2::element_text(angle = 0, vjust = 0.5),
-      plot.caption = ggplot2::element_text(hjust = 0)
+      plot.caption = ggplot2::element_text(hjust = 0),
+      axis.text = ggplot2::element_text(size = 16)
     )
 }
